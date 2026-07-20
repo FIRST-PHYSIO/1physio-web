@@ -65,7 +65,7 @@
   .logo img{height:42px;width:auto;}
   .logo-text{font-size:18px;font-weight:800;color:var(--navy);letter-spacing:-0.02em;line-height:1.15;}
   .logo-text small{display:block;font-size:11px;font-weight:600;color:var(--text-mute);letter-spacing:.02em;}
-  nav ul{display:flex;gap:26px;}
+  nav ul{display:flex;gap:22px;}
   nav a{font-size:15px;font-weight:600;color:var(--text);}
   nav a:hover{color:var(--blue-2);}
   .nav-cta{display:flex;align-items:center;gap:12px;}
@@ -127,7 +127,6 @@
   .data-metrics span{background:rgba(47,111,237,.25);color:#cfe0ff;font-size:13px;font-weight:600;padding:8px 16px;border-radius:999px;}
 
   /* PT */
-  .pt{background:var(--gray-bg);}
   .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   .prog-card{
     background:#fff;border:1px solid var(--border);border-radius:var(--radius);
@@ -144,6 +143,38 @@
   .pt-points li{font-size:15px;padding-left:18px;position:relative;color:var(--text);}
   .pt-points li::before{content:"✓";position:absolute;left:0;color:var(--blue-2);font-weight:800;}
 
+  /* Sports / specialty */
+  .sports-wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;margin-bottom:44px;}
+  .sports-wrap img{border-radius:var(--radius);border:1px solid var(--border);width:100%;height:100%;object-fit:cover;max-height:420px;}
+  .sports-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .sports-card{background:var(--gray-bg);border:1px solid var(--border);border-radius:var(--radius);padding:26px 22px;}
+  .sports-card h4{font-size:16px;color:var(--navy);margin-bottom:8px;}
+  .sports-card p{font-size:13.5px;color:var(--text-mute);}
+
+  /* Trainers */
+  .trainer-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .trainer-card{border:1px solid var(--border);border-radius:var(--radius);background:#fff;overflow:hidden;}
+  .trainer-photo{
+    aspect-ratio:4/3;overflow:hidden;
+    background:linear-gradient(160deg,var(--blue-light),#dfeaff);
+    display:flex;align-items:center;justify-content:center;color:var(--blue-2);font-size:13px;font-weight:700;
+  }
+  .trainer-photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%;}
+  .trainer-body{padding:26px;}
+  .trainer-body h3{font-size:21px;margin-bottom:4px;}
+  .trainer-role{font-size:14px;font-weight:700;color:var(--blue-2);margin-bottom:14px;}
+  .trainer-body ul{margin-bottom:4px;}
+  .trainer-body li{font-size:14px;color:var(--text);padding-left:16px;position:relative;margin-bottom:7px;}
+  .trainer-body li::before{content:"—";position:absolute;left:0;color:var(--blue-2);}
+  .trainer-body details{margin-top:12px;border-top:1px solid var(--border);padding-top:12px;}
+  .trainer-body summary{
+    cursor:pointer;font-size:13.5px;font-weight:700;color:var(--text-mute);list-style:none;
+  }
+  .trainer-body summary::-webkit-details-marker{display:none;}
+  .trainer-body summary::after{content:" +";color:var(--blue-2);}
+  .trainer-body details[open] summary::after{content:" −";}
+  .trainer-body details p{font-size:13px;color:var(--text-mute);margin-top:10px;line-height:1.8;}
+
   /* Facility gallery */
   .gallery-grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;}
   .gallery-grid figure{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
@@ -157,7 +188,6 @@
   .equip-row span{background:#fff;border:1px solid var(--border);padding:8px 16px;border-radius:999px;font-size:13px;font-weight:600;color:var(--navy);}
 
   /* GX strip */
-  .gx{background:var(--gray-bg);}
   .gx-card{
     background:#fff;border:1px solid var(--border);border-radius:var(--radius);
     padding:40px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;
@@ -178,12 +208,36 @@
   .ba-card li{font-size:14px;padding-left:16px;position:relative;margin-bottom:8px;color:var(--text);}
   .ba-card li::before{content:"—";position:absolute;left:0;color:var(--blue-2);}
   .ba-card p{font-size:13px;color:var(--text-mute);margin-top:12px;}
+  .real-note{
+    margin-top:36px;background:var(--blue-light);border:1px solid #d5e3ff;border-radius:var(--radius);
+    padding:22px 26px;font-size:14px;color:var(--navy);font-weight:600;
+  }
 
-  /* Academy strip */
+  /* FAQ */
+  .faq-list{max-width:820px;}
+  .faq-list details{
+    border:1px solid var(--border);border-radius:12px;margin-bottom:12px;background:#fff;
+    padding:0 22px;
+  }
+  .faq-list summary{
+    cursor:pointer;font-weight:700;font-size:15.5px;padding:18px 0;list-style:none;position:relative;padding-right:30px;
+  }
+  .faq-list summary::-webkit-details-marker{display:none;}
+  .faq-list summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);color:var(--blue-2);font-size:20px;font-weight:800;}
+  .faq-list details[open] summary::after{content:"−";}
+  .faq-list details p{padding:0 0 18px;font-size:14px;color:var(--text-mute);}
+
+  /* Academy */
   .academy-strip{background:var(--gray-bg);}
-  .academy-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
-  .academy-grid li{font-size:15px;padding-left:18px;position:relative;margin-bottom:12px;color:var(--text);}
-  .academy-grid li::before{content:"—";position:absolute;left:0;color:var(--blue-2);}
+  .academy-intro{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;margin-bottom:44px;}
+  .academy-intro li{font-size:15px;padding-left:18px;position:relative;margin-bottom:12px;color:var(--text);}
+  .academy-intro li::before{content:"—";position:absolute;left:0;color:var(--blue-2);}
+  .academy-cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .academy-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:30px 26px;}
+  .academy-card .cat{font-size:12px;font-weight:800;color:var(--blue-2);letter-spacing:.06em;margin-bottom:10px;}
+  .academy-card h3{font-size:20px;margin-bottom:16px;}
+  .academy-card .chips{display:flex;gap:8px;flex-wrap:wrap;}
+  .academy-card .chips span{background:var(--blue-light);color:var(--blue);font-size:13px;font-weight:700;padding:7px 14px;border-radius:999px;}
 
   /* Location */
   .find-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
@@ -233,34 +287,6 @@
   .contact-form textarea{resize:vertical;min-height:96px;}
   .contact-form label{font-size:13px;color:#c9d6e8;margin-bottom:-6px;}
 
-  /* Sports */
-  .sports-wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;margin-bottom:44px;}
-  .sports-wrap img{border-radius:var(--radius);border:1px solid var(--border);width:100%;height:100%;object-fit:cover;max-height:420px;}
-  .sports-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-  .sports-card{background:var(--gray-bg);border:1px solid var(--border);border-radius:var(--radius);padding:26px 22px;}
-  .sports-card h4{font-size:16px;color:var(--navy);margin-bottom:8px;}
-  .sports-card p{font-size:13.5px;color:var(--text-mute);}
-
-  /* Real change */
-  .real-note{
-    margin-top:36px;background:var(--blue-light);border:1px solid #d5e3ff;border-radius:var(--radius);
-    padding:22px 26px;font-size:14px;color:var(--navy);font-weight:600;
-  }
-
-  /* FAQ */
-  .faq-list{max-width:820px;}
-  .faq-list details{
-    border:1px solid var(--border);border-radius:12px;margin-bottom:12px;background:#fff;
-    padding:0 22px;
-  }
-  .faq-list summary{
-    cursor:pointer;font-weight:700;font-size:15.5px;padding:18px 0;list-style:none;position:relative;padding-right:30px;
-  }
-  .faq-list summary::-webkit-details-marker{display:none;}
-  .faq-list summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);color:var(--blue-2);font-size:20px;font-weight:800;}
-  .faq-list details[open] summary::after{content:"−";}
-  .faq-list details p{padding:0 0 18px;font-size:14px;color:var(--text-mute);}
-
   /* Floating CTA (mobile) */
   .floating-cta{
     display:none;position:fixed;bottom:0;left:0;right:0;z-index:120;
@@ -281,13 +307,13 @@
     .menu-toggle{display:flex;}
     .hero h1{font-size:32px;}
     .why-grid,.sports-grid{grid-template-columns:1fr 1fr;}
-    .card-grid,.ba-grid,.data-steps,.find-grid,.form-grid,.data-shots{grid-template-columns:1fr;}
+    .card-grid,.ba-grid,.data-steps,.find-grid,.form-grid,.data-shots,.trainer-grid,.academy-cards{grid-template-columns:1fr;}
     .data-steps[style]{grid-template-columns:1fr !important;}
     .sports-grid[style]{grid-template-columns:1fr 1fr !important;}
     .pt-points{grid-template-columns:1fr;}
     .gallery-grid{grid-template-columns:1fr;}
     .gallery-grid figure.tall{grid-row:auto;}
-    .academy-grid,.gx-card,.sports-wrap{grid-template-columns:1fr;}
+    .academy-intro,.gx-card,.sports-wrap{grid-template-columns:1fr;}
     section{padding:64px 0;}
     .floating-cta{display:grid;}
     footer{padding-bottom:90px;}
@@ -308,6 +334,7 @@
         <li><a href="#data">데이터 관리</a></li>
         <li><a href="#pt">PT</a></li>
         <li><a href="#sports">전문 분야</a></li>
+        <li><a href="#trainers">선생님</a></li>
         <li><a href="#facility">시설</a></li>
         <li><a href="#find">지점 안내</a></li>
         <li><a href="#academy">교육단체</a></li>
@@ -403,7 +430,7 @@
       <div class="data-step">
         <div class="num">STEP 1 · 분류 · 정밀 평가</div>
         <h3>내 몸에 맞는 트랙 설정</h3>
-        <p>첫날 표준 평가로 몸 상태를 수치화하고 재활 · 일반(인바디&근력) · 스포츠 트랙으로 분류해 목표를 설정합니다.</p>
+        <p>첫날 표준 평가로 몸 상태를 수치화하고 재활 · 일반(인바디&amp;근력) · 스포츠 트랙으로 분류해 목표를 설정합니다.</p>
       </div>
       <div class="data-step">
         <div class="num">STEP 2 · 세션 기록</div>
@@ -545,7 +572,86 @@
   </div>
 </section>
 
-<section id="facility" class="gx" style="background:var(--gray-bg);">
+<section id="trainers" style="background:var(--gray-bg);">
+  <div class="container">
+    <span class="eyebrow">TEAM · 오송 본점</span>
+    <h2>퍼피짐 트레이너</h2>
+    <p class="section-sub">오송 본점의 선생님들입니다. 모두 보건복지부 물리치료사 면허를 가진, 직접 운동하는 전문가입니다. 전주점 · 서울점 선생님도 곧 소개해 드릴게요.</p>
+    <div class="trainer-grid">
+
+      <div class="trainer-card">
+        <div class="trainer-photo"><img src="images/trainer-hong.jpg" alt="홍웅표 대표 프로필 사진"></div>
+        <div class="trainer-body">
+          <h3>홍웅표 <span style="font-size:13px;font-weight:700;color:var(--text-mute);">대표 · 물리치료사</span></h3>
+          <div class="trainer-role">미국 물리치료 임상 박사 · 미국 근력 및 체력 코치</div>
+          <ul>
+            <li>前 안동과학대학교 물리치료 겸임교수</li>
+            <li>前 예수병원 · 분당 SPRC 스포츠병원 물리치료사</li>
+            <li>근골격계 운동치료(EMP) · 퍼스널 피지오 강사</li>
+          </ul>
+          <details>
+            <summary>전체 약력 보기</summary>
+            <p>보건복지부 물리치료사 면허증<br>미국 물리치료 임상 박사<br>미국 근력 및 체력 코치<br><br>前 안동과학대 물리치료 겸임교수<br>前 예수병원<br>前 분당 SPRC 스포츠병원<br>前 청주 21세기의원 실장 &amp; 스포츠센터장<br>前 청주 올바른의원<br><br>근골격계 운동치료(EMP) 강사 · 퍼스널 피지오 강사<br><br>외국 교육 이수 — FMS, SFMA, IPNFA, IFOMPT, MDT, Movement Links, OMT, IASTM<br>국내 교육 이수 — KEMA, OMPT, ScoliosisPT, SportsPT, CLS, PNF, Bobath</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="trainer-card">
+        <div class="trainer-photo"><img src="images/trainer-shin.jpg" alt="신종수 트레이너 프로필 사진"></div>
+        <div class="trainer-body">
+          <h3>신종수 <span style="font-size:13px;font-weight:700;color:var(--text-mute);">물리치료사</span></h3>
+          <div class="trainer-role">재활 · 교정 운동 전문 · PERSONAL PHYSIO 강사</div>
+          <ul>
+            <li>생활체육지도자 (보디빌딩)</li>
+            <li>前 연세재활의학과 · 연세정형외과 · 서울드림정형외과 물리치료사</li>
+            <li>前 서울 랄라짐 재활 &amp; 교정운동 트레이너</li>
+          </ul>
+          <details>
+            <summary>전체 약력 보기</summary>
+            <p>보건복지부 물리치료사 면허증<br>생활 체육 지도자(보디빌딩)<br>PERSONAL PHYSIO 강사<br><br>前 청주 연세재활의학과 물리치료사<br>前 야당 연세정형외과 물리치료사<br>前 서울 랄라짐(재활 &amp; 교정운동) 트레이너<br>前 서울드림 정형외과 물리치료사<br><br>근골격계 운동치료(EMP) 이수<br>운동 분석 기반 근골격계 관리 솔루션(KEMA)<br>근골격계 재활 전문가(MRS) 이수<br>스포츠 재활(Sport Physio — 상지·하지) 이수<br>근골격계 기능적 교육(NFR) 이수<br>도수치료 및 카이로프랙틱 교육(MTA) 이수<br>만성통증 중재 교육 이수<br>러닝피지오 교육(RP1) 이수</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="trainer-card">
+        <div class="trainer-photo"><img src="images/trainer-kim.jpg" alt="김강윤 트레이너 프로필 사진"></div>
+        <div class="trainer-body">
+          <h3>김강윤 <span style="font-size:13px;font-weight:700;color:var(--text-mute);">물리치료사</span></h3>
+          <div class="trainer-role">파워리프팅 세계 챔피언 · 근력 &amp; 파워 전문</div>
+          <ul>
+            <li>🥇 2026 USAPL USA 벤치월드컵 -67.5 1위</li>
+            <li>USAPL -67.5kg 벤치프레스 국내 기록 보유</li>
+            <li>前 닥터스트렝스 · 베이직포스트렝스 코치</li>
+          </ul>
+          <details>
+            <summary>전체 약력 보기</summary>
+            <p>보건복지부장관 물리치료사 면허증<br>前 닥터스트렝스 코치 (2022.02 ~ 2024.02)<br>前 TEAM ANT Online coaching 코치<br>前 베이직포스트렝스 코치 (2024.07 ~ 2025.02)<br>서울준신경외과의원 근무 (2025.02 ~ 2025.08)<br>2023 팀앤트 Squat Seminar 강의<br><br>🥇 2019 ICN 피지크 Junior 1위<br>🥇 2019 IPF Korea 파워리프팅 챔피언쉽 -59 체급 1위<br>🥇 2022 아시안 파워리프팅 챔피언쉽 선발전 Junior -66 1위<br>2022 아시안 파워리프팅 챔피언쉽 한국 대표팀 선발<br>🥇 2023 USAPL Korea SummerSlam 벤치 온리 전체급 1위<br>🥇 2023 USAPL Korea SummerSlam 벤치 온리 -67.5 1위<br>🥇 2024 USAPL England 벤치월드컵 -67.5 1위<br>🥉 2024 USAPL England 벤치월드컵 오픈 전체급 3위<br>🥈 2024 USAPL England 벤치월드컵 주니어 전체급 2위<br>🥇 2026 USAPL USA 벤치월드컵 -67.5 1위<br>🥇 USAPL JR 전체급 벤치프레스 1위<br>USAPL -67.5kg 벤치프레스 국내 기록 보유</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="trainer-card">
+        <div class="trainer-photo"><img src="images/trainer-jang.jpg" alt="장동진 트레이너 프로필 사진"></div>
+        <div class="trainer-body">
+          <h3>장동진 <span style="font-size:13px;font-weight:700;color:var(--text-mute);">물리치료사</span></h3>
+          <div class="trainer-role">스포츠 재활 · 축구 의학 · 테이핑 전문</div>
+          <ul>
+            <li>단국대학교 스포츠의학 석사</li>
+            <li>STC 근력 코디네이션 트레이닝 마스터</li>
+            <li>국제축구연맹 FIFA Diploma in Football Medicine</li>
+          </ul>
+          <details>
+            <summary>전체 약력 보기</summary>
+            <p>보건복지부장관 물리치료사 면허증<br>단국대학교 스포츠의학 석사<br>STC — 근력 코디네이션 트레이닝 마스터<br>前 바른신경외과 근무<br>국제축구연맹 FIFA Diploma in Football Medicine<br>미국심장협회 BLS Provider<br>대한트레이닝협회 테이핑 전문가<br><br>FMT — 독일 인증 도수 전문 물리치료사<br>BPR — 교정 운동 전문가 과정<br>MFR — 근막 이완 치료<br>EMP — 근골격계 운동 치료<br>KCI — 대한 카이로프랙틱<br>OMPT — 정형 도수 물리치료<br>Redcord — 슬링<br>WINBACK — TECAR THERAPY</p>
+          </details>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="facility">
   <div class="container">
     <span class="eyebrow">FACILITY</span>
     <h2>시설 둘러보기</h2>
@@ -593,7 +699,7 @@
   </div>
 </section>
 
-<section id="gx">
+<section id="gx" style="background:var(--gray-bg);">
   <div class="container">
     <span class="eyebrow">GROUP TRAINING</span>
     <h2>SAFE5 그룹운동 (GX)</h2>
@@ -652,7 +758,7 @@
   </div>
 </section>
 
-<section id="faq" class="academy-strip" style="background:#fff;padding-top:0;">
+<section id="faq" style="padding-top:0;">
   <div class="container">
     <span class="eyebrow">FAQ</span>
     <h2>자주 묻는 질문</h2>
@@ -683,18 +789,45 @@
 </section>
 
 <section id="academy" class="academy-strip">
-  <div class="container academy-grid">
-    <div>
-      <span class="eyebrow">FIRST PHYSIO</span>
-      <h2>물리치료사 교육단체가<br>만든 센터입니다</h2>
-      <p class="section-sub" style="margin-bottom:0;">퍼스트피지오는 2022년 설립된 물리치료사 운동치료 교육단체입니다. 물리치료사를 가르치는 강사들이 모여, 이론을 넘어 실전 운동의 정석을 교육합니다. 교육 문의는 아래 폼으로 접수해 주세요.</p>
+  <div class="container">
+    <span class="eyebrow">FIRST PHYSIO EDUCATION</span>
+    <h2>물리치료사 교육단체가 만든 센터입니다</h2>
+    <p class="section-sub">퍼스트피지오는 2022년 설립된 물리치료사 운동치료 교육단체입니다. 물리치료사를 가르치는 강사들이 모여, 이론을 넘어 실전 운동의 정석을 교육합니다. 교육 소식은 <a href="https://www.instagram.com/1physio_2022" target="_blank" rel="noopener" style="color:var(--blue-2);font-weight:700;">@1physio_2022</a>에서 확인하세요.</p>
+    <div class="academy-intro">
+      <ul>
+        <li>미국 물리치료 박사학위 대표가 이끄는 교육단체</li>
+        <li>수많은 물리치료사 · 의사 · 트레이너 대상 교육 진행</li>
+        <li>운동 치료 · 스포츠 재활 · S&amp;C 교육 커리큘럼</li>
+        <li>교육 내용을 퍼피짐 현장에서 그대로 적용</li>
+      </ul>
+      <div>
+        <a class="btn btn-outline-navy" href="https://www.instagram.com/1physio_2022" target="_blank" rel="noopener">교육 인스타그램 @1physio_2022</a>
+      </div>
     </div>
-    <ul>
-      <li>미국 물리치료 박사학위 대표가 이끄는 교육단체</li>
-      <li>수많은 물리치료사 · 의사 · 트레이너 대상 교육 진행</li>
-      <li>운동 치료 · 스포츠 재활 · S&amp;C 교육 커리큘럼</li>
-      <li>교육 내용을 퍼피짐 현장에서 그대로 적용</li>
-    </ul>
+    <div class="academy-cards">
+      <div class="academy-card">
+        <div class="cat">PHYSIO EDUCATION</div>
+        <h3>피지오 교육</h3>
+        <div class="chips">
+          <span>운동치료</span>
+          <span>스포츠 재활</span>
+          <span>관절염 재활</span>
+          <span>교정 운동</span>
+        </div>
+      </div>
+      <div class="academy-card">
+        <div class="cat">STRENGTH &amp; CONDITIONING</div>
+        <h3>스트렝스 컨디셔닝 교육</h3>
+        <div class="chips">
+          <span>파워리프팅</span>
+          <span>역도 (교정)</span>
+          <span>러닝</span>
+          <span>골프 퍼포먼스</span>
+          <span>축구 피지컬</span>
+          <span>스포츠 테이핑</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -754,7 +887,11 @@
       </div>
       <div class="contact-info-item">
         <div class="ic">IG</div>
-        <div><h4>인스타그램 DM</h4><p><a href="https://ig.me/m/1physio_gym" target="_blank" rel="noopener">@1physio_gym 바로 문의</a></p></div>
+        <div><h4>퍼피짐 DM</h4><p><a href="https://ig.me/m/1physio_gym" target="_blank" rel="noopener">@1physio_gym</a></p></div>
+      </div>
+      <div class="contact-info-item">
+        <div class="ic">EDU</div>
+        <div><h4>교육 문의 DM</h4><p><a href="https://ig.me/m/1physio_2022" target="_blank" rel="noopener">@1physio_2022</a></p></div>
       </div>
     </div>
 
@@ -784,7 +921,7 @@
       </div>
       <div class="form-card">
         <h3>퍼스트피지오 교육 문의</h3>
-        <p class="form-desc">물리치료사 · 의사 · 트레이너 대상 운동치료 교육</p>
+        <p class="form-desc">물리치료사 · 의사 · 트레이너 대상 운동치료 · S&amp;C 교육</p>
         <form class="contact-form" action="https://formsubmit.co/hongwoongpyo@naver.com" method="POST">
           <input type="hidden" name="_subject" value="[퍼스트피지오] 교육 문의">
           <input type="hidden" name="_captcha" value="false">
@@ -813,7 +950,7 @@
 <footer>
   <div class="container footer-wrap">
     <div>© 2026 FIRST PHYSIO. All rights reserved.</div>
-    <div>퍼스트피지오 짐(퍼피짐) 오송 본점 · 전주점 · 서울점(예정) · <a href="https://www.instagram.com/1physio_gym" target="_blank" rel="noopener">@1physio_gym</a> · 1physio.kr</div>
+    <div>퍼피짐 <a href="https://www.instagram.com/1physio_gym" target="_blank" rel="noopener">@1physio_gym</a> · 퍼스트피지오 교육 <a href="https://www.instagram.com/1physio_2022" target="_blank" rel="noopener">@1physio_2022</a> · 1physio.kr</div>
   </div>
 </footer>
 
