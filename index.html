@@ -303,7 +303,18 @@
   .footer-wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;}
 
   @media(max-width:900px){
-    nav, .nav-cta .btn-outline-navy{display:none;}
+    nav{display:none;}
+    nav.open{
+      display:block;position:fixed;top:72px;left:0;right:0;z-index:99;
+      background:#fff;border-bottom:1px solid var(--border);
+      padding:6px 24px 14px;box-shadow:0 16px 28px rgba(11,45,78,.12);
+      max-height:calc(100vh - 72px);overflow-y:auto;
+    }
+    nav.open ul{flex-direction:column;gap:0;}
+    nav.open li{border-bottom:1px solid var(--gray-bg);}
+    nav.open li:last-child{border-bottom:none;}
+    nav.open a{display:block;padding:14px 0;font-size:16px;}
+    .nav-cta .btn-outline-navy{display:none;}
     .menu-toggle{display:flex;}
     .hero h1{font-size:32px;}
     .why-grid,.sports-grid{grid-template-columns:1fr 1fr;}
@@ -1001,10 +1012,8 @@
 <script>
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('nav');
-  toggle.addEventListener('click', () => {
-    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-    nav.style.cssText += 'position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 24px;border-bottom:1px solid #e4e8ee;';
-  });
+  toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
   if (new URLSearchParams(location.search).get('sent')) {
     alert('접수되었습니다. 빠르게 연락드리겠습니다!');
   }
