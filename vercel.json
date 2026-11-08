@@ -1,4 +1,8 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/osong", "destination": "/", "permanent": true },
+    { "source": "/osong.html", "destination": "/", "permanent": true }
+  ]
 }
